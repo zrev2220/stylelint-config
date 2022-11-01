@@ -1,0 +1,53 @@
+{
+  "name": "@zrev2220/stylelint-config",
+  "version": "1.0.0",
+  "description": "My personal Stylelint config",
+  "main": "index.js",
+  "files": [
+    ".stylelintrc.json",
+    "index.js"
+  ],
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "run-s prettier-check",
+    "lint-fix": "run-s prettier",
+    "prettier": "prettier -u --ignore-path .gitignore --write .",
+    "prettier-check": "prettier -u --ignore-path .gitignore --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zrev2220/stylelint-config.git"
+  },
+  "keywords": [
+    "stylelint"
+  ],
+  "author": "https://github.com/zrev2220",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zrev2220/stylelint-config/issues"
+  },
+  "homepage": "https://github.com/zrev2220/stylelint-config#readme",
+  "dependencies": {
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-config-standard-scss": "^6.0.0"
+  },
+  "devDependencies": {
+    "@zrev2220/prettier-config": "^1.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.7.1"
+  },
+  "peerDependencies": {
+    "postcss-scss": ">=4",
+    "prettier": ">=2",
+    "stylelint": ">=14.8.0",
+    "stylelint-order": ">=5",
+    "stylelint-prettier": ">=2"
+  },
+  "prettier": "@zrev2220/prettier-config",
+  "lint-staged": {
+    "*": "prettier -u --ignore-path .gitignore --write"
+  }
+}
